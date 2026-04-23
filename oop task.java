@@ -22,7 +22,7 @@ class GasolineEngine implements Engine {
     }
 }
 
-// Electronic Engine
+//Electronic Engine
 class ElectronicEngine implements Engine {
     private int speed = 0;
 
@@ -39,7 +39,7 @@ class ElectronicEngine implements Engine {
     }
 }
 
-// ===== Hybrid Engine =====
+//Hybrid Engine
 class MixedHybridEngine implements Engine {
 
     private GasolineEngine gasEngine = new GasolineEngine();
@@ -160,7 +160,6 @@ class CarFactory {
         car.setEngine(engine);
     }
 }
-
 // Main
 public class Main {
     public static void main(String[] args) {
@@ -168,13 +167,13 @@ public class Main {
         Car car = CarFactory.createCar("hybrid");
 
         car.start();
-        car.accelerate(); // 20
-        car.accelerate(); // 40
-        car.accelerate(); // 60
-        car.brake();      // 40
+        car.accelerate(); 
+        car.accelerate(); 
+        car.accelerate(); 
+        car.brake();      
         car.stop();
 
-        System.out.println("----- Change Engine -----");
+        System.out.println("Change Engine");
 
         CarFactory.replaceEngine(car, "gas");
 
